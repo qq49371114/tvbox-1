@@ -85,7 +85,7 @@ def get_ext(ext):
 
 def get_data(url):
     if url.startswith("http"):
-        urlReq = requests.get(url, verify=False)
+        urlReq = requests.get(url, verify=False, timeout=60)
         return urlReq.text
     return ""
 
